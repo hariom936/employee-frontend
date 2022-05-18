@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 import axios from "axios";
@@ -7,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { setAdmin, setToken } from "../../redux/signin/signin.action";
+
+import "./Signin.css";
 
 const Signin = ({ setToken, setAdmin }) => {
   const navigate = useNavigate();
@@ -30,7 +33,7 @@ const Signin = ({ setToken, setAdmin }) => {
   };
   return (
     <>
-      <div>
+      <div className="signin">
         <h2>Admin SignIn</h2>
         <form onSubmit={submitHandler}>
           <input
@@ -42,10 +45,10 @@ const Signin = ({ setToken, setAdmin }) => {
           <input
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="Atleast Eight Digit Password"
             onChange={inputHandler}
           />
-          <button>SignIn</button>
+          <h1><button>Sign In</button></h1>
         </form>
       </div>
     </>

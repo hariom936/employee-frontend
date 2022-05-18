@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { setEmployee } from "../../redux/signin/signin.action";
 
+import './Signin.css';
 const Signin = ({ setEmployee }) => {
   const navigate = useNavigate();
   const [input, setInput] = useState({
@@ -34,7 +35,7 @@ const Signin = ({ setEmployee }) => {
   };
   return (
     <>
-      <div>
+      <div className="signin">
         <h2>Employee SignIn</h2>
         <form onSubmit={submitHandler}>
           <input
@@ -45,8 +46,8 @@ const Signin = ({ setEmployee }) => {
           />
           <input
             name="password"
-            type="password"
-            placeholder="Password"
+            type=" Aleast Eight Digit password"
+            placeholder="Atleast Eight Digit Password"
             onChange={inputHandler}
           />
           <button>Sign In</button>

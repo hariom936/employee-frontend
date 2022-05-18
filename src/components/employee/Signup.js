@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import axios from "axios";
 
+import'./Signup.css';
 const Signup = () => {
   const [alert, setAlert] = useState("");
   const [input, setInput] = useState({
@@ -25,7 +26,7 @@ const Signup = () => {
   };
   return (
     <>
-      <div>
+      <div className="signup">
         <h2>Employee SignUp</h2>
         <form onSubmit={submitHandler}>
           <input

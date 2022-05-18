@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import axios from "axios";
 
+import "./Signup.css";
+
 const Signup = () => {
   const [input, setInput] = useState({
     name: "",
@@ -25,7 +27,7 @@ const Signup = () => {
   };
   return (
     <>
-      <div >
+      <div className="signup">
         <h2>Admin SignUp</h2>
         <form onSubmit={submitHandler}>
           <input
@@ -49,10 +51,10 @@ const Signup = () => {
           <input
             name="password"
             type="password"
-            placeholder="Atlest Eight Digit Password"
+            placeholder="Atleast Eight Digit Password"
             onChange={inputHandler}
           />
-          <button>SignUp</button>
+          <h1><button>Sign Up</button></h1>
           {alert && (
             <div className="alert-message">
               <p>{alert}</p>
