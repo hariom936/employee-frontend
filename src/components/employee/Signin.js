@@ -21,7 +21,7 @@ const Signin = ({ setEmployee }) => {
     event.preventDefault();
     axios
       .post(
-        "https://localhost:4000/employee/signin",
+        "https://employee-backend-six.vercel.app/employee/signin",
         input
       )
       .then((response) => {
@@ -35,7 +35,7 @@ const Signin = ({ setEmployee }) => {
   return (
     <>
       <div>
-        <h2>Employee Signin</h2>
+        <h2>Employee SignIn</h2>
         <form onSubmit={submitHandler}>
           <input
             name="email"
@@ -49,7 +49,7 @@ const Signin = ({ setEmployee }) => {
             placeholder="Password"
             onChange={inputHandler}
           />
-          <button>Signin</button>
+          <button>Sign In</button>
         </form>
       </div>
     </>

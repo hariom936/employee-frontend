@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 const EditEmployee = ({ getToken }) => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [input, setInput] = useState({ firstName: "", lastName: "" });
+  const [input, setInput] = useState({ name: "", userName: "" });
   const inputHandler = (event) => {
     const { name, value } = event.target;
     setInput({ ...input, [name]: value });
@@ -20,7 +20,7 @@ const EditEmployee = ({ getToken }) => {
     event.preventDefault();
     axios
       .put(
-        `https://employee-management-system-backend.vercel.app/admin/edit/${id}`,
+        `https://employee-backend-six.vercel.app/admin/edit/${id}`,
         input,
         {
           headers: {
@@ -39,15 +39,15 @@ const EditEmployee = ({ getToken }) => {
         <h1>Edit Employee</h1>
         <form onSubmit={submitHandler}>
           <input
-            name="firstName"
+            name="name"
             type="text"
-            placeholder="First Name"
+            placeholder="Name"
             onChange={inputHandler}
           />
           <input
-            name="lastName"
+            name="userName"
             type="text"
-            placeholder="Last Name"
+            placeholder="User Name"
             onChange={inputHandler}
           />
           <button>Edit</button>

@@ -14,7 +14,7 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
   useEffect(() => {
     axios
       .get(
-        "https://employee-management-system-backend.vercel.app/admin/getall",
+        "https://employee-backend-six.vercel.app/admin/getall",
         {
           headers: {
             "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
   });
   const deleteEmployee = (id) => {
     axios.delete(
-      `https://employee-management-system-backend.vercel.app/admin/delete/${id}`,
+      `https://employee-backend-six.vercel.app/admin/delete/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -44,13 +44,13 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
           <div>
             <div>Admin</div>
             <div>
-              {getAdmin.firstName} {getAdmin.lastName}
+              {getAdmin.firstName} {getAdmin.id_no}
             </div>
             <div>{getAdmin.email}</div>
           </div>
         </div>
         <div>
-          <Link to="/" style={{ color: "blue" }}>
+          <Link to="/" style={{ color: "red" }}>
             Home
           </Link>
         </div>
@@ -60,10 +60,10 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
         {employees.length > 0 && (
           <div className="employee-details">
             <h3>
-              <strong>First Name</strong>
+              <strong>Name</strong>
             </h3>
             <h3>
-              <strong>Last Name</strong>
+              <strong>ID_No</strong>
             </h3>
             <h3>
               <strong>Email</strong>
@@ -72,8 +72,8 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
         )}
         {employees.map((employee) => (
           <div key={employee._id} className="employee">
-            <div>{employee.firstName}</div>
-            <div>{employee.lastName}</div>
+            <div>{employee.Name}</div>
+            <div>{employee.id_no}</div>
             <div>{employee.email}</div>
             <div
               className="edit"

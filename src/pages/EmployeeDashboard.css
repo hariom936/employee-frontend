@@ -1,6 +1,7 @@
 .employee-dashboard {
   width: 80%;
   margin-inline: auto;
+  border-width: 5px;
 }
 
 .employee-dashboard h1 {

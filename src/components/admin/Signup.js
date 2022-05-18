@@ -4,8 +4,8 @@ import axios from "axios";
 
 const Signup = () => {
   const [input, setInput] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
+    userName: "",
     email: "",
     password: "",
   });
@@ -18,26 +18,26 @@ const Signup = () => {
     event.preventDefault();
     axios
       .post(
-        "https://localhost:4000/admin/signup",
+        "https://employee-backend-six.vercel.app/admin/signup",
         input
       )
       .then((response) => setAlert(response.data));
   };
   return (
     <>
-      <div>
-        <h2>Admin Signup</h2>
+      <div >
+        <h2>Admin SignUp</h2>
         <form onSubmit={submitHandler}>
           <input
-            name="firstName"
+            name="name"
             type="text"
-            placeholder="First Name"
+            placeholder="Name"
             onChange={inputHandler}
           />
           <input
-            name="lastName"
+            name="userName"
             type="text"
-            placeholder="Last Name"
+            placeholder="User Name"
             onChange={inputHandler}
           />
           <input
@@ -49,10 +49,10 @@ const Signup = () => {
           <input
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="Atlest Eight Digit Password"
             onChange={inputHandler}
           />
-          <button>Signup</button>
+          <button>SignUp</button>
           {alert && (
             <div className="alert-message">
               <p>{alert}</p>

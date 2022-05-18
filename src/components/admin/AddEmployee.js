@@ -11,8 +11,8 @@ import { connect } from "react-redux";
 const AddEmployee = ({ getToken }) => {
   const navigate = useNavigate();
   const [input, setInput] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
+    userName: "",
     email: "",
     password: "",
   });
@@ -24,7 +24,7 @@ const AddEmployee = ({ getToken }) => {
     event.preventDefault();
     axios
       .post(
-        "https://employee-management-system-backend.vercel.app/admin/add",
+        "https://employee-backend-six.vercel.app/admin/add",
         input,
         {
           headers: {
@@ -43,15 +43,15 @@ const AddEmployee = ({ getToken }) => {
         <h1>Add Employee</h1>
         <form onSubmit={submitHandler}>
           <input
-            name="firstName"
+            name="name"
             type="text"
-            placeholder="First Name"
+            placeholder="Name"
             onChange={inputHandler}
           />
           <input
-            name="lastName"
+            name="userName"
             type="text"
-            placeholder="Last Name"
+            placeholder="user Name"
             onChange={inputHandler}
           />
           <input
