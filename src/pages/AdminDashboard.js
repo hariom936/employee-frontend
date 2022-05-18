@@ -44,13 +44,13 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
           <div>
             <div>Admin</div>
             <div>
-              {getAdmin.firstName} {getAdmin.id_no}
+              {getAdmin.name} {getAdmin.userName}
             </div>
             <div>{getAdmin.email}</div>
           </div>
         </div>
         <div>
-          <Link to="/" style={{ color: "red" }}>
+          <Link to="/" style={{ color: "blue" }}>
             Home
           </Link>
         </div>
@@ -63,7 +63,7 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
               <strong>Name</strong>
             </h3>
             <h3>
-              <strong>ID_No</strong>
+              <strong>User Name</strong>
             </h3>
             <h3>
               <strong>Email</strong>
@@ -72,8 +72,8 @@ const AdminDashboard = ({ getToken, getAdmin }) => {
         )}
         {employees.map((employee) => (
           <div key={employee._id} className="employee">
-            <div>{employee.Name}</div>
-            <div>{employee.id_no}</div>
+            <div>{employee.name}</div>
+            <div>{employee.userName}</div>
             <div>{employee.email}</div>
             <div
               className="edit"

@@ -25,6 +25,7 @@ const AddEmployee = ({ getToken }) => {
     axios
       .post(
         "https://employee-backend-six.vercel.app/admin/add",
+        //"https://localhost:3000/app/admin/add",
         input,
         {
           headers: {

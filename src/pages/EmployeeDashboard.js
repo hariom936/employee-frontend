@@ -20,15 +20,15 @@ const EmployeeDashboard = ({ employee }) => {
             <strong>Name</strong>
           </div>
           <div>
-            <strong>ID_No</strong>
+            <strong>User Name</strong>
           </div>
           <div>
             <strong>Email Address</strong>
           </div>
         </div>
         <div className="employee-info">
-          <div>{employee.Name}</div>
-          <div>{employee.id_no}</div>
+          <div>{employee.name}</div>
+          <div>{employee.userName}</div>
           <div>{employee.email}</div>
         </div>
       </div>

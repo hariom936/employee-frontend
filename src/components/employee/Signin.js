@@ -46,7 +46,7 @@ const Signin = ({ setEmployee }) => {
           />
           <input
             name="password"
-            type=" Aleast Eight Digit password"
+            type="password"
             placeholder="Atleast Eight Digit Password"
             onChange={inputHandler}
           />

@@ -48,7 +48,8 @@ const Signin = ({ setToken, setAdmin }) => {
             placeholder="Atleast Eight Digit Password"
             onChange={inputHandler}
           />
-          <h1><button>Sign In</button></h1>
+          <div className="btn">
+          <h1><button>Sign In</button></h1></div>
         </form>
       </div>
     </>
